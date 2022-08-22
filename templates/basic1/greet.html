@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Django 기초</title>
+</head>
+<body>
+    <h1> 이 페이지는 greet.html 페이지 입니다.</h1>
+    <h2> 안녕 greet.html!! </h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+var ip = "";
+var hostname = "";
+var city = "";
+var region = "";
+var country = "";
+var loc = "";
+var org = "";
+
+$.getJSON("http://ipinfo.io", function(data) {
+    ip = data.ip // 접속자 ip
+    hostname = data.hostname // 접속자 hostname
+    city = data.city // 접속자 도시
+    region = data.region // 접속자 지역
+    country = data.country // 접속자 국가
+    loc = data.loc // 접속 위도, 경도
+    org = data.org // ISP (인터넷 서비스 제공사업자)
+
+    alert("지켜보고 있다!!\n"
+          +"아이피:"+ip+"\n"
+          +"호스트:"+hostname+"\n"
+          +"도시:"+city+"\n"
+          +"지역:"+region+"\n"
+          +"위도 경도:"+loc+"\n"
+          +"인터넷 서비스:"+org+"\n"
+          );
+
+  alert("난 너의 정보를 내 이메일로 보낼 수 있지만 email js에 가입하기가 귀찮아서 나중에 하겠다");
+ alert("난 너의 로그인 아이디와 비번을 탈취 할 수 있지만 로그인 구현하고 하겠다");
+
+});
+</script>
+</body>
+</html>

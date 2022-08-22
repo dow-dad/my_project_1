@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>별거 아닌 설문조사</title>
+</head>
+<body>
+    <h1> 아무의미없는 설문지 입니다. </h1>
+    <h3> 아래에 '빡빡이'를 입력하세요.</h3>
+    <form action = '/basic1/fruit/' method = 'post'>
+        {% csrf_token %}
+
+        <input type = 'text', name = 'favorite'>
+        <h3>평소 쉴 땐 뭘하시나요?</h3>
+      <p> <select name = 'hobby'>
+            <option>낮잠</option>
+            <option>영화</option>
+            <option>독서</option>
+            <option>게임</option>
+        </select>
+      </p>
+     <h3> 최근에 감명깊게 읽은 책의 소감을 적으세요.</h3>
+        <p><textarea name = 'book'></textarea></p>
+
+     <h3> 사용하는 브라우저는? </h3>
+     <p> <input list = 'browser' name = 'browser'>
+          <datalist id = 'browser'>
+              <option>크롬</option>
+              <option>익스플로러</option>
+              <option>엣지</option>
+          </datalist>
+     </p>
+     <p><input type = 'submit' value = '   클   릭   하   세   요   '></p>
+    </form>
+
+</body>
+</html>
